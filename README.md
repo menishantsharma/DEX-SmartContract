@@ -1,48 +1,53 @@
-# Arbitrage and Decentralized Exchange (DEX) Simulation
 
-This project implements a decentralized exchange (DEX) and an arbitrage contract to simulate and execute arbitrage opportunities between two DEXs. It also includes scripts to simulate DEX operations and arbitrage scenarios.
+# Decentralized Exchange using Ethereum Smart Contract
 
-## Project Structure
+Ethereum Smart Contract for decentralized exchange to swap one token with other without any middleman and in trustworthy way. In short P2P money swap machine.
 
-### Solidity Contracts
+## Features
 
-1. **Token.sol**  
-   Implements an ERC20 token. Used as the base token for trading in the DEX.
+- Exchange TokenA with TokenB without middleman
+- Liquidity pools
+- ERC20 standard to create tokens
+- Constant Product formula to decide exchange rate
+- Completely Decentralized
+- Swap fees for each swap transaction
+- Incentive for liquidity providers
+- Sanity checks to ensure safe arithmetic
+- Swapping mechanism
+- Tracking metrics to keep track of tokenA and tokenB
+- Simulation script to simulate the usage of DEX smart contract
+## Tech Stack
 
-2. **DEX.sol**  
-   Implements a decentralized exchange with liquidity pools. Supports adding/removing liquidity and swapping tokens.
+**Solidity**: The core language used to create the project.
 
-3. **LPToken.sol**  
-   Implements ERC20 tokens for liquidity providers. Minted when liquidity is added and burned when liquidity is removed.
+**Javascript**: The language used to create simulation script of the smart contract.
 
-4. **arbitrage.sol**  
-   Implements an arbitrage contract to identify and execute profitable trades between two DEXs. Uses a ternary search algorithm to maximize profits.
+**Remix IDE**: The online IDE to create smart contract.
 
-### Simulation Scripts
+**ERC 20 Standard**: To create tokens.
+## Run Locally
 
-1. **simulate_DEX.js**  
-   Simulates DEX operations such as adding/removing liquidity and token swaps. Tracks statistics like total value locked (TVL), fees, and slippage.
+Clone the project
 
-2. **simulate_arbitrage.js**  
-   Simulates arbitrage scenarios between two DEXs. Tests cases with no profit, profit below the threshold, and profit above the threshold.
+```bash
+  git clone https://github.com/menishantsharma/DEX-SmartContract
+```
 
-### Documentation
+Go to the project directory
 
-- **README.md**  
-  Provides an overview of the project, its structure, and usage instructions.
+```bash
+  cd DEX-SmartContract
+```
 
-- **report.pdf**  
-  Contains a detailed report on the implementation, testing, and results of the project.
+Deploy the contracts using Remix or your preferred Ethereum development environment.
 
-## Usage
+Use the `simulate_DEX.js` simulation script to test the functionality of the contracts.
+## Authors
 
-1. Deploy the contracts using Remix or your preferred Ethereum development environment.
-2. Use the simulation scripts to test the functionality of the contracts:
-   - Run `simulate_DEX.js` to simulate DEX operations.
-   - Run `simulate_arbitrage.js` to simulate arbitrage scenarios.
+- **Nishant Sharma** - MTech CSE Student at IIT Bombay
+- **Github** - [@Nishant Sharma](https://github.com/menishantsharma)
 
-## Key Features
 
-- **DEX Functionality**: Add/remove liquidity, swap tokens, and calculate spot prices.
-- **Arbitrage Execution**: Identify and execute profitable trades between two DEXs.
-- **Simulation**: Scripts to simulate real-world scenarios and test the contracts.
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
